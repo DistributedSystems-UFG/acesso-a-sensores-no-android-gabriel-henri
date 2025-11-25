@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyEmptyViewsActivityApplication">
         <activity
+            android:name=".LuminosityActivity"
+            android:exported="false" />
+        <activity
             android:name=".DisplayMessageActivity"
             android:exported="false" />
         <activity

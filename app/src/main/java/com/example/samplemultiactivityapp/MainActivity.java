@@ -40,4 +40,9 @@ public class MainActivity extends AppCompatActivity {
         editText.setText("");
         startActivity(intent);
     }
+
+    public void buttonClick2(View view){
+        Intent intent = new Intent(this, LuminosityActivity.class);
+        startActivity(intent);
+    }
 }
