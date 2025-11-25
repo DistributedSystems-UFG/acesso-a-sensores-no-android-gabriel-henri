@@ -1,5 +1,8 @@
 package com.example.samplemultiactivityapp;
 
+import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -12,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LuminosityActivity extends AppCompatActivity {
 
+    private SensorManager sensorManager;
+    private Sensor mLight;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +29,11 @@ public class LuminosityActivity extends AppCompatActivity {
             return insets;
         });
 
-        TextView textView = findViewById(R.id.textView6);
-        textView.setText("Luminosity will appear here.");
+        sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        TextView textView = (TextView) findViewById(R.id.textView6);
+        LightSensorAccess lightSensorAccess = new LightSensorAccess(sensorManager, textView);
+        //TextView textView = findViewById(R.id.textView6);
+        //textView.setText("Luminosity will appear here.");
     }
 
     public void backButtonClick2(View view) {
