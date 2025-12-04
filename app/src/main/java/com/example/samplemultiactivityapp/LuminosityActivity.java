@@ -32,8 +32,7 @@ public class LuminosityActivity extends AppCompatActivity {
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         TextView textView = (TextView) findViewById(R.id.textView6);
         LightSensorAccess lightSensorAccess = new LightSensorAccess(sensorManager, textView);
-        //TextView textView = findViewById(R.id.textView6);
-        //textView.setText("Luminosity will appear here.");
+
     }
 
     public void backButtonClick2(View view) {

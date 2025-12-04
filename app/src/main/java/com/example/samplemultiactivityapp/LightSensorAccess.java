@@ -11,7 +11,10 @@ public class LightSensorAccess implements SensorEventListener {
     private Sensor mLight;
     private TextView sensor_field;
 
+    SensorPublisher sp;
+
     public LightSensorAccess(SensorManager sm, TextView tv){
+        sp = new SensorPublisher(tv);
         sensorManager = sm;
         sensor_field = tv;
         mLight = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
@@ -28,6 +31,9 @@ public class LightSensorAccess implements SensorEventListener {
         float lux = event.values[0];
         // Show luminosity value on the text field
         sensor_field.setText(String.valueOf(lux));
+
+        sp.publishSensor();
+
     }
 
     @Override
