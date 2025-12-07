@@ -45,4 +45,29 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LuminosityActivity.class);
         startActivity(intent);
     }
+
+    public void openAccelerometer(View view) {
+        Intent intent = new Intent(this, AccelerometerActivity.class);
+        startActivity(intent);
+    }
+
+    public void openGyroscope(View view) {
+        Intent intent = new Intent(this, GyroscopeActivity.class);
+        startActivity(intent);
+    }
+
+    public void openMagnetometer(View view) {
+        Intent intent = new Intent(this, MagnetometerActivity.class);
+        startActivity(intent);
+    }
+
+    public void openProximity(View view) {
+        Intent intent = new Intent(this, ProximityActivity.class);
+        startActivity(intent);
+    }
+
+    public void openPressure(View view) {
+        Intent intent = new Intent(this, PressureActivity.class);
+        startActivity(intent);
+    }
 }

@@ -16,6 +16,21 @@
             android:name=".LuminosityActivity"
             android:exported="false" />
         <activity
+            android:name=".AccelerometerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GyroscopeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MagnetometerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProximityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PressureActivity"
+            android:exported="false" />
+        <activity
             android:name=".DisplayMessageActivity"
             android:exported="false" />
         <activity
